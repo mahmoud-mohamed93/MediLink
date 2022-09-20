@@ -1,2 +1,2 @@
-# MediLink-
+# MediLink
 MediLink 
