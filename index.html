@@ -16,27 +16,34 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- favicon -->
-  <link rel="icon" type="image/x-icon" href="assest/img/fav.svg" />
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="assest/css/vendor/bootstrap.min.css" />
+  <!-- <link rel="icon" type="image/x-icon" href="assest/img/fav.svg" /> -->
   <!-- Font Awesome -->
   <link rel="stylesheet" href="assest/css/vendor/all.min.css" />
-  <!-- Animate -->
+  <!-- Bootstrap -->
+  <!-- <link rel="stylesheet" href="assest/css/vendor/bootstrap.min.css" /> -->
+  <link rel="stylesheet" href="assest/css/vendor/bootstrap.rtl.min.css" />
+  <!-- wowJs -->
   <link rel="stylesheet" href="assest/css/vendor/animate.css" />
   <!-- Swiperjs -->
   <link rel="stylesheet" href="assest/css/vendor/swiper-bundle.min.css" />
-  <!-- Owl Carousel -->
-  <link rel="stylesheet" href="assest/css/vendor/owl.carousel.min.css" />
-  <link rel="stylesheet" href="assest/css/vendor/owl.theme.default.min.css">
   <!-- MediLink Page style  -->
-  <link rel="stylesheet" href="assest/css/MediLink.css" />
-    
+  <!-- <link rel="stylesheet" id="enStyle" href="assest/css/MediLink.css" /> -->
+  <link rel="stylesheet" id="enStyle" href="assest/css/MediLink-ar.css" />
 </head>
+
 <body>
   <!-- loader -->
   <div class="loader">
+    <span></span>
   </div>
   <!-- end loader -->
+
+  <!-- Start Back to top button -->
+  <button class="btn-back-to-top">
+      <i class="fas fa-chevron-up"></i>
+      <i class="fas fa-chevron-up"></i>
+  </button>
+  <!-- End Back to top button -->
 
   <!-- ================ Header ================= -->
   <header>
@@ -58,6 +65,13 @@
                 Mon - Fri: 9.00am - 11.00pm
               </li>
             </ul>
+            
+            <form>
+                <select id="lang-switch">
+                    <option value="en" selected>EN</option>
+                    <option value="ar">AR</option>
+                </select>
+            </form>
           </div>
           <div class="col-xl-4">
             <ul>
@@ -94,10 +108,10 @@
           <div class="col-lg-7 main-menu">
             <ul>
               <li>
-                <a href="#">home <i class="fa-solid fa-plus"></i></i></a>
+                <a href="#">home</a>
               </li>
               <li>
-                <a href="#">about <i class="fa-solid fa-plus"></i></i></a>
+                <a href="#">about</a>
               </li>
               <li class="drop-li">
                 <a href="#">departments <i class="fa-solid fa-plus"></i></i></a>
@@ -109,7 +123,7 @@
                 </ul>
               </li>
               <li class="drop-li">
-                <a href="#">Doctors <i class="fa-solid fa-plus"></i></i></a>
+                <a href="#">Doctors <i class="fa-solid fa-plus"></i></a>
                 <ul class="sub-menu">
                   <li><a href="#">doctor 1</a></li>
                   <li><a href="#">doctor 2</a></li>
@@ -118,7 +132,7 @@
                 </ul>
               </li>
               <li class="drop-li">
-                <a href="#">news <i class="fa-solid fa-plus"></i></i></a>
+                <a href="#">news <i class="fa-solid fa-plus"></i></a>
                 <ul class="sub-menu">
                   <li><a href="#">news 1</a></li>
                   <li><a href="#">news 2</a></li>
@@ -126,13 +140,13 @@
                 </ul>
               </li>
               <li>
-                <a href="#">contacts <i class="fa-solid fa-plus"></i></a>
+                <a href="#">contacts</a>
               </li>
             </ul>
           </div>
           <div class="col-md-3 appartment">
             <div class="search-icon">
-              <input type="text" class="search-input" placeholder="Search...." required>
+              <input type="text" class="search-input" placeholder="Search here" required>
               <div class="search-btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </div>
@@ -150,21 +164,21 @@
 
   <!-- ================ Slider ================= -->
   <!-- Slider main container -->
-  <div class="swiper">
+  <div class="swiper mainSlider">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
       <div class="swiper-slide">
         <div class="image-1"></div>
         <div class="content swiper-no-swiping">
-          <div class="title wow fadeInDown" data-swiper-parallax="-300">We Take Care Of Your Healthy Health
+          <div class="title">We Take Care Of Your Healthy Health
           </div>
-          <div class="text wow fadeInDown" data-swiper-parallax="-200">
+          <div class="text">
             <p>Mimply dummy text of the printing typesetting ipsum dolor onsecte dipiscing.
             </p>
           </div>
           <a href="#">
-            <button class="swiper-btn wow fadeInDown">
+            <button class="swiper-btn">
             Read More
             <i class="fa-solid fa-chevron-right"></i>
           </button></a>
@@ -174,14 +188,14 @@
       <div class="swiper-slide">
         <div class="image-2"></div>
         <div class="content swiper-no-swiping">
-          <div class="title wow fadeInDown" data-swiper-parallax="-300">We Take Care Of Your Healthy Health
+          <div class="title" >We Take Care Of Your Healthy Health
           </div>
-          <div class="text wow fadeInDown" data-swiper-parallax="-200">
+          <div class="text" >
             <p>Mimply dummy text of the printing typesetting ipsum dolor onsecte dipiscing.
             </p>
           </div>
           <a href="#">
-            <button class="swiper-btn wow fadeInDown">
+            <button class="swiper-btn">
             Read More
             <i class="fa-solid fa-chevron-right"></i>
           </button></a>
@@ -191,14 +205,14 @@
       <div class="swiper-slide">
         <div class="image-3"></div>
         <div class="content swiper-no-swiping">
-          <div class="title wow fadeInDown" data-swiper-parallax="-300">We Take Care Of Your Healthy Health
+          <div class="title">We Take Care Of Your Healthy Health
           </div>
-          <div class="text wow fadeInDown" data-swiper-parallax="-200">
+          <div class="text">
             <p>Mimply dummy text of the printing typesetting ipsum dolor onsecte dipiscing.
             </p>
           </div>
           <a href="#">
-            <button class="swiper-btn wow fadeInDown">
+            <button class="swiper-btn">
             Read More
             <i class="fa-solid fa-chevron-right"></i>
           </button></a>
@@ -209,8 +223,8 @@
     <!-- <div class="swiper-pagination"></div> -->
 
     <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class=" swiper-button-prev maiSlmainSliderider-button-prev"></div>
+    <div class=" swiper-button-next mainSlider-button-next"></div>
 
     <!-- If we need scrollbar -->
     <!-- <div class="swiper-scrollbar"></div> -->
@@ -278,68 +292,76 @@
           <h2>Our Departments</h2>
           <p>Dedicated Services</p>
         </div>
-        <div class="owl-carousel owl-theme wow fadeInDown">
 
-          <div class="box">
-            <span class="box-nomber">01.</span>
-            <div class="box-icon">
-              <i class="fa-solid fa-tooth"></i>
+        <!-- Swiper -->
+        <div class="swiper mySwiper wow fadeInDown">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="box">
+                <span class="box-nomber">01.</span>
+                <div class="box-icon">
+                  <i class="fa-solid fa-tooth"></i>
+                </div>
+                <h3><a href="#">Dental Care</a></h3>
+                <p>
+                  Aorem Ipsumea dummy texte printing setting detry bringin eight challenges faced.
+                </p>
+                <a class="box-btn" href="#">
+                  READ MORE
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
-            <h3><a href="#">Dental Care</a></h3>
-            <p>
-              Aorem Ipsumea dummy texte printing setting detry bringin eight challenges faced.
-            </p>
-            <a class="box-btn" href="#">
-              READ MORE
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-
-          <div class="box">
-            <span class="box-nomber">02.</span>
-            <div class="box-icon">
-              <i class="fa-solid fa-capsules"></i>
+            <div class="swiper-slide">
+              <div class="box">
+                <span class="box-nomber">02.</span>
+                <div class="box-icon">
+                  <i class="fa-solid fa-capsules"></i>
+                </div>
+                <h3><a href="#">Medicine</a></h3>
+                <p>
+                  Aorem Ipsumea dummy texte printing setting detry bringin eight challenges faced.
+                </p>
+                <a class="box-btn" href="#">
+                  READ MORE
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
-            <h3><a href="#">Medicine</a></h3>
-            <p>
-              Aorem Ipsumea dummy texte printing setting detry bringin eight challenges faced.
-            </p>
-            <a class="box-btn" href="#">
-              READ MORE
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-
-          <div class="box">
-            <span class="box-nomber">03.</span>
-            <div class="box-icon">
-              <i class="fa-solid fa-heart-pulse"></i>
+            <div class="swiper-slide">
+              <div class="box">
+                <span class="box-nomber">03.</span>
+                <div class="box-icon">
+                  <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <h3><a href="#">Cardeology</a></h3>
+                <p>
+                  Aorem Ipsumea dummy texte printing setting detry bringin eight challenges faced.
+                </p>
+                <a class="box-btn" href="#">
+                  READ MORE
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
-            <h3><a href="#">Cardeology</a></h3>
-            <p>
-              Aorem Ipsumea dummy texte printing setting detry bringin eight challenges faced.
-            </p>
-            <a class="box-btn" href="#">
-              READ MORE
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-
-          <div class="box">
-            <span class="box-nomber">04.</span>
-            <div class="box-icon">
-              <i class="fa-solid fa-lungs"></i>
+            <div class="swiper-slide">
+              <div class="box">
+                <span class="box-nomber">04.</span>
+                <div class="box-icon">
+                  <i class="fa-solid fa-lungs"></i>
+                </div>
+                <h3><a href="#">Orthopedic</a></h3>
+                <p>
+                  Aorem Ipsumea dummy texte printing setting detry bringin eight challenges faced.
+                </p>
+                <a class="box-btn" href="#">
+                  READ MORE
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
-            <h3><a href="#">Orthopedic</a></h3>
-            <p>
-              Aorem Ipsumea dummy texte printing setting detry bringin eight challenges faced.
-            </p>
-            <a class="box-btn" href="#">
-              READ MORE
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
           </div>
-          
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
@@ -447,26 +469,907 @@
     </div>
   </sction>
   <!-- ================ /Features ================= -->
-  <!-- <div class="left-image col-lg-6">
-    <img src="assest/img/figure8.jpg" alt="">
-  </div>
-  <div class="right-feature col-lg-6">
-    <h2>We are the trusted experts things simple</h2>
-    <p>
-      Dwisi enim ad minim veniam, quis laore nostrud exerci tation area ulm hedi corper turet suscipit lobortis nisl ut aliquip erat volutpat autem vel eum iriure dolor in hendrerit in vulputate.
-    </p>
-  </div> -->
+  
+  <!-- ================ Awards ================= -->
+  <section class="awards">
+    <div class="container">
+      <div class="row">
+        <div class="left-box col-xl-7 col-lg-6 col-12">
+          <h2>We Are Certified Award Winning Hospital.</h2>
+        </div>
+        <div class="right-box col-xl-5 col-lg-6 col-12">
+          <img src="assest/img/brand-bg1.png" alt="">
+          <ul>
+            <li>
+              <img src="assest/img/brand1.png" alt="">
+            </li>
+            <li>
+              <img src="assest/img/brand2.png" alt="">
+            </li>
+            <li>
+              <img src="assest/img/brand3.png" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================ /Awards ================= -->
+
+  <!-- ================ /Specialist Doctors ================= -->
+  <!-- Set up your HTML -->
+  <section class="doctors">
+    <img class="left-image" src="assest/img/figure5.png">
+    <div class="container">
+      <div class="row">
+        <div class="section-heading text-left wow fadeInDown">
+          <h2>Specialist Doctors</h2>
+          <p>Experienced Doctor</p>
+        </div>
+
+        <!-- Swiper -->
+        <div class="swiper mySwiper wow fadeInDown">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="box">
+                <div class="doctor-image">
+                  <img src="assest/img/team33.png" alt="">
+                  <a href="#">
+                    <i class="fa-solid fa-plus"></i>
+                  </a>
+                </div>
+                <div class="box-content">
+                  <h3><a href="#">Dr. Zinia Zara</a></h3>
+                  <p>Gynaecology</p>
+                </div>
+                <div class="doctor-appointment">
+                  <ul>
+                    <li>Mon - Tues
+                      <span>08.00 :17.00</span>
+                    </li>
+                    <li>Fri - Sat
+                      <span>09.00 :12.00</span>
+                    </li>
+                    <li>Sun - Mon
+                      <span>08.00 :17.00</span>
+                    </li>
+                  </ul>
+                  <a class="btn" href="#">MAKE AN APPOINTMENT</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="box">
+                <div class="doctor-image">
+                  <img src="assest/img/team34.png" alt="">
+                  <a href="#">
+                    <i class="fa-solid fa-plus"></i>
+                  </a>
+                </div>
+                <div class="box-content">
+                  <h3><a href="#">Dr. Nadim Kamal</a></h3>
+                  <p>Orthopaedics</p>
+                </div>
+                <div class="doctor-appointment">
+                  <ul>
+                    <li>Mon - Tues
+                      <span>08.00 :17.00</span>
+                    </li>
+                    <li>Fri - Sat
+                      <span>09.00 :12.00</span>
+                    </li>
+                    <li>Sun - Mon
+                      <span>08.00 :17.00</span>
+                    </li>
+                  </ul>
+                  <a class="btn" href="#">MAKE AN APPOINTMENT</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="box">
+                <div class="doctor-image">
+                  <img src="assest/img/team35.png" alt="">
+                  <a href="#">
+                    <i class="fa-solid fa-plus"></i>
+                  </a>
+                </div>
+                <div class="box-content">
+                  <h3><a href="#">Dr. Rihana Roy</a></h3>
+                  <p>Lense Expert</p>
+                </div>
+                <div class="doctor-appointment">
+                  <ul>
+                    <li>Mon - Tues
+                      <span>08.00 :17.00</span>
+                    </li>
+                    <li>Fri - Sat
+                      <span>09.00 :12.00</span>
+                    </li>
+                    <li>Sun - Mon
+                      <span>08.00 :17.00</span>
+                    </li>
+                  </ul>
+                  <a class="btn" href="#">MAKE AN APPOINTMENT</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="box">
+                <div class="doctor-image">
+                  <img src="assest/img/team36.png" alt="">
+                  <a href="#">
+                    <i class="fa-solid fa-plus"></i>
+                  </a>
+                </div>
+                <div class="box-content">
+                  <h3><a href="#">Dr. Steven Roy</a></h3>
+                  <p>Cardiology</p>
+                </div>
+                <div class="doctor-appointment">
+                  <ul>
+                    <li>Mon - Tues
+                      <span>08.00 :17.00</span>
+                    </li>
+                    <li>Fri - Sat
+                      <span>09.00 :12.00</span>
+                    </li>
+                    <li>Sun - Mon
+                      <span>08.00 :17.00</span>
+                    </li>
+                  </ul>
+                  <a class="btn" href="#">MAKE AN APPOINTMENT</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================ /Specialist Doctors ================= -->
+
+  <!-- ================ schedule ================= -->
+  <section class="schedule">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Specialist Doctors</h2>
+        <p>Experienced Doctor</p>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th class="time-heading">Time</th>
+                <th class="day-heading">Saturday</th>
+                <th class="day-heading">Sunday</th>
+                <th class="day-heading">Monday</th>
+                <th class="day-heading">Tusday</th>
+                <th class="day-heading">Wednesday</th>
+                <th class="day-heading">Thursday</th>
+                <th class="day-heading">Friday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="time-wrapper">08.00am</th>
+                <td class="item-wrapper">
+                  <div class="box">
+                    <div class="box-img">
+                      <img src="assest/img/team7.png" alt="doctor">
+                    </div>
+                    <div class="box-body">
+                      <div class="box-title">Steven Smith</div>
+                      <div class="box-contact">Contact Lens</div>
+                      <a class="box-btn" href="#">View Profile</a>
+                    </div>
+                  </div>
+                  <div class="item-title">Contact Lens</div>
+                  <div class="item-time">08.00am - 09.00am</div>
+                  <div class="item-doctor">Dr.Mike Hussy</div>
+                </td>
+                <td class="item-wrapper">
+                  <div class="box">
+                    <div class="box-img">
+                      <img src="assest/img/team7.png" alt="doctor">
+                    </div>
+                    <div class="box-body">
+                      <div class="box-title">Steven Smith</div>
+                      <div class="box-contact">Contact Lens</div>
+                      <a class="box-btn" href="#">View Profile</a>
+                    </div>
+                  </div>
+                  <div class="item-title">Contact Lens</div>
+                  <div class="item-time">08.00am - 09.00am</div>
+                  <div class="item-doctor">Dr.Mike Hussy</div>
+                </td>
+                <td class="item-wrapper"></td>
+                <td class="item-wrapper"></td>
+                <td class="item-wrapper">
+                  <div class="box">
+                    <div class="box-img">
+                      <img src="assest/img/team7.png" alt="doctor">
+                    </div>
+                    <div class="box-body">
+                      <div class="box-title">Steven Smith</div>
+                      <div class="box-contact">Contact Lens</div>
+                      <a class="box-btn" href="#">View Profile</a>
+                    </div>
+                  </div>
+                  <div class="item-title">Contact Lens</div>
+                  <div class="item-time">08.00am - 09.00am</div>
+                  <div class="item-doctor">Dr.Mike Hussy</div>
+                </td>
+                <td class="item-wrapper">
+                  <div class="box">
+                    <div class="box-img">
+                      <img src="assest/img/team7.png" alt="doctor">
+                    </div>
+                    <div class="box-body">
+                      <div class="box-title">Steven Smith</div>
+                      <div class="box-contact">Contact Lens</div>
+                      <a class="box-btn" href="#">View Profile</a>
+                    </div>
+                  </div>
+                  <div class="item-title">Contact Lens</div>
+                  <div class="item-time">08.00am - 09.00am</div>
+                  <div class="item-doctor">Dr.Mike Hussy</div>
+                </td>
+                <td class="item-wrapper"></td>
+              </tr>
+
+              <tr>
+                <th class="time-wrapper">10.00am</th>
+                <td class="item-wrapper"></td>
+                <td class="item-wrapper"></td>
+                <td class="item-wrapper">
+                  <div class="box">
+                    <div class="box-img">
+                      <img src="assest/img/team7.png" alt="doctor">
+                    </div>
+                    <div class="box-body">
+                      <div class="box-title">Steven Smith</div>
+                      <div class="box-contact">Contact Lens</div>
+                      <a class="box-btn" href="#">View Profile</a>
+                    </div>
+                  </div>
+                  <div class="item-title">Contact Lens</div>
+                  <div class="item-time">08.00am - 09.00am</div>
+                  <div class="item-doctor">Dr.Mike Hussy</div>
+                </td>
+                <td class="item-wrapper">
+                  <div class="box">
+                    <div class="box-img">
+                      <img src="assest/img/team7.png" alt="doctor">
+                    </div>
+                    <div class="box-body">
+                      <div class="box-title">Steven Smith</div>
+                      <div class="box-contact">Contact Lens</div>
+                      <a class="box-btn" href="#">View Profile</a>
+                    </div>
+                  </div>
+                  <div class="item-title">Contact Lens</div>
+                  <div class="item-time">08.00am - 09.00am</div>
+                  <div class="item-doctor">Dr.Mike Hussy</div>
+                </td>
+                <td class="item-wrapper"></td>
+                <td class="item-wrapper"></td>
+                <td class="item-wrapper">
+                  <div class="box">
+                    <div class="box-img">
+                      <img src="assest/img/team7.png" alt="doctor">
+                    </div>
+                    <div class="box-body">
+                      <div class="box-title">Steven Smith</div>
+                      <div class="box-contact">Contact Lens</div>
+                      <a class="box-btn" href="#">View Profile</a>
+                    </div>
+                  </div>
+                  <div class="item-title">Contact Lens</div>
+                  <div class="item-time">08.00am - 09.00am</div>
+                  <div class="item-doctor">Dr.Mike Hussy</div>
+                </td>
+              </tr>
+
+              <tr>
+                <th class="time-wrapper">12.00am</th>
+                <td class="item-wrapper">
+                  <div class="box">
+                    <div class="box-img">
+                      <img src="assest/img/team7.png" alt="doctor">
+                    </div>
+                    <div class="box-body">
+                      <div class="box-title">Steven Smith</div>
+                      <div class="box-contact">Contact Lens</div>
+                      <a class="box-btn" href="#">View Profile</a>
+                    </div>
+                  </div>
+                  <div class="item-title">Contact Lens</div>
+                  <div class="item-time">08.00am - 09.00am</div>
+                  <div class="item-doctor">Dr.Mike Hussy</div>
+                </td>
+                <td class="item-wrapper">
+                  <div class="box">
+                    <div class="box-img">
+                      <img src="assest/img/team7.png" alt="doctor">
+                    </div>
+                    <div class="box-body">
+                      <div class="box-title">Steven Smith</div>
+                      <div class="box-contact">Contact Lens</div>
+                      <a class="box-btn" href="#">View Profile</a>
+                    </div>
+                  </div>
+                  <div class="item-title">Contact Lens</div>
+                  <div class="item-time">08.00am - 09.00am</div>
+                  <div class="item-doctor">Dr.Mike Hussy</div>
+                </td>
+                <td class="item-wrapper"></td>
+                <td class="item-wrapper"></td>
+                <td class="item-wrapper">
+                  <div class="box">
+                    <div class="box-img">
+                      <img src="assest/img/team7.png" alt="doctor">
+                    </div>
+                    <div class="box-body">
+                      <div class="box-title">Steven Smith</div>
+                      <div class="box-contact">Contact Lens</div>
+                      <a class="box-btn" href="#">View Profile</a>
+                    </div>
+                  </div>
+                  <div class="item-title">Contact Lens</div>
+                  <div class="item-time">08.00am - 09.00am</div>
+                  <div class="item-doctor">Dr.Mike Hussy</div>
+                </td>
+                <td class="item-wrapper">
+                  <div class="box">
+                    <div class="box-img">
+                      <img src="assest/img/team7.png" alt="doctor">
+                    </div>
+                    <div class="box-body">
+                      <div class="box-title">Steven Smith</div>
+                      <div class="box-contact">Contact Lens</div>
+                      <a class="box-btn" href="#">View Profile</a>
+                    </div>
+                  </div>
+                  <div class="item-title">Contact Lens</div>
+                  <div class="item-time">08.00am - 09.00am</div>
+                  <div class="item-doctor">Dr.Mike Hussy</div>
+                </td>
+                <td class="item-wrapper"></td>
+              </tr>
+
+              <tr>
+                <th class="time-wrapper">02.00am</th>
+                <td class="item-wrapper"></td>
+                <td class="item-wrapper"></td>
+                <td class="item-wrapper">
+                  <div class="box">
+                    <div class="box-img">
+                      <img src="assest/img/team7.png" alt="doctor">
+                    </div>
+                    <div class="box-body">
+                      <div class="box-title">Steven Smith</div>
+                      <div class="box-contact">Contact Lens</div>
+                      <a class="box-btn" href="#">View Profile</a>
+                    </div>
+                  </div>
+                  <div class="item-title">Contact Lens</div>
+                  <div class="item-time">08.00am - 09.00am</div>
+                  <div class="item-doctor">Dr.Mike Hussy</div>
+                </td>
+                <td class="item-wrapper">
+                  <div class="box">
+                    <div class="box-img">
+                      <img src="assest/img/team7.png" alt="doctor">
+                    </div>
+                    <div class="box-body">
+                      <div class="box-title">Steven Smith</div>
+                      <div class="box-contact">Contact Lens</div>
+                      <a class="box-btn" href="#">View Profile</a>
+                    </div>
+                  </div>
+                  <div class="item-title">Contact Lens</div>
+                  <div class="item-time">08.00am - 09.00am</div>
+                  <div class="item-doctor">Dr.Mike Hussy</div>
+                </td>
+                <td class="item-wrapper"></td>
+                <td class="item-wrapper"></td>
+                <td class="item-wrapper">
+                  <div class="box">
+                    <div class="box-img">
+                      <img src="assest/img/team7.png" alt="doctor">
+                    </div>
+                    <div class="box-body">
+                      <div class="box-title">Steven Smith</div>
+                      <div class="box-contact">Contact Lens</div>
+                      <a class="box-btn" href="#">View Profile</a>
+                    </div>
+                  </div>
+                  <div class="item-title">Contact Lens</div>
+                  <div class="item-time">08.00am - 09.00am</div>
+                  <div class="item-doctor">Dr.Mike Hussy</div>
+                </td>
+              </tr>
+
+              <tr>
+                <th class="time-wrapper">4.00am</th>
+                <td class="item-wrapper">
+                  <div class="box">
+                    <div class="box-img">
+                      <img src="assest/img/team7.png" alt="doctor">
+                    </div>
+                    <div class="box-body">
+                      <div class="box-title">Steven Smith</div>
+                      <div class="box-contact">Contact Lens</div>
+                      <a class="box-btn" href="#">View Profile</a>
+                    </div>
+                  </div>
+                  <div class="item-title">Contact Lens</div>
+                  <div class="item-time">08.00am - 09.00am</div>
+                  <div class="item-doctor">Dr.Mike Hussy</div>
+                </td>
+                <td class="item-wrapper">
+                  <div class="box">
+                    <div class="box-img">
+                      <img src="assest/img/team7.png" alt="doctor">
+                    </div>
+                    <div class="box-body">
+                      <div class="box-title">Steven Smith</div>
+                      <div class="box-contact">Contact Lens</div>
+                      <a class="box-btn" href="#">View Profile</a>
+                    </div>
+                  </div>
+                  <div class="item-title">Contact Lens</div>
+                  <div class="item-time">08.00am - 09.00am</div>
+                  <div class="item-doctor">Dr.Mike Hussy</div>
+                </td>
+                <td class="item-wrapper"></td>
+                <td class="item-wrapper"></td>
+                <td class="item-wrapper">
+                  <div class="box">
+                    <div class="box-img">
+                      <img src="assest/img/team7.png" alt="doctor">
+                    </div>
+                    <div class="box-body">
+                      <div class="box-title">Steven Smith</div>
+                      <div class="box-contact">Contact Lens</div>
+                      <a class="box-btn" href="#">View Profile</a>
+                    </div>
+                  </div>
+                  <div class="item-title">Contact Lens</div>
+                  <div class="item-time">08.00am - 09.00am</div>
+                  <div class="item-doctor">Dr.Mike Hussy</div>
+                </td>
+                <td class="item-wrapper">
+                  <div class="box">
+                    <div class="box-img">
+                      <img src="assest/img/team7.png" alt="doctor">
+                    </div>
+                    <div class="box-body">
+                      <div class="box-title">Steven Smith</div>
+                      <div class="box-contact">Contact Lens</div>
+                      <a class="box-btn" href="#">View Profile</a>
+                    </div>
+                  </div>
+                  <div class="item-title">Contact Lens</div>
+                  <div class="item-time">08.00am - 09.00am</div>
+                  <div class="item-doctor">Dr.Mike Hussy</div>
+                </td>
+                <td class="item-wrapper"></td>
+              </tr>
+
+              <tr>
+                <th class="time-wrapper">06.00am</th>
+                <td class="item-wrapper"></td>
+                <td class="item-wrapper"></td>
+                <td class="item-wrapper">
+                  <div class="box">
+                    <div class="box-img">
+                      <img src="assest/img/team7.png" alt="doctor">
+                    </div>
+                    <div class="box-body">
+                      <div class="box-title">Steven Smith</div>
+                      <div class="box-contact">Contact Lens</div>
+                      <a class="box-btn" href="#">View Profile</a>
+                    </div>
+                  </div>
+                  <div class="item-title">Contact Lens</div>
+                  <div class="item-time">08.00am - 09.00am</div>
+                  <div class="item-doctor">Dr.Mike Hussy</div>
+                </td>
+                <td class="item-wrapper">
+                  <div class="box">
+                    <div class="box-img">
+                      <img src="assest/img/team7.png" alt="doctor">
+                    </div>
+                    <div class="box-body">
+                      <div class="box-title">Steven Smith</div>
+                      <div class="box-contact">Contact Lens</div>
+                      <a class="box-btn" href="#">View Profile</a>
+                    </div>
+                  </div>
+                  <div class="item-title">Contact Lens</div>
+                  <div class="item-time">08.00am - 09.00am</div>
+                  <div class="item-doctor">Dr.Mike Hussy</div>
+                </td>
+                <td class="item-wrapper"></td>
+                <td class="item-wrapper"></td>
+                <td class="item-wrapper">
+                  <div class="box">
+                    <div class="box-img">
+                      <img src="assest/img/team7.png" alt="doctor">
+                    </div>
+                    <div class="box-body">
+                      <div class="box-title">Steven Smith</div>
+                      <div class="box-contact">Contact Lens</div>
+                      <a class="box-btn" href="#">View Profile</a>
+                    </div>
+                  </div>
+                  <div class="item-title">Contact Lens</div>
+                  <div class="item-time">08.00am - 09.00am</div>
+                  <div class="item-doctor">Dr.Mike Hussy</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================ /schedule ================= -->
+
+  <!-- ================ banner ================= -->
+  <section class="banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-5 col-lg-8 col-md-10 col-12">
+          <div class="banner-box">
+            <h2>For Emergency Cases</h2>
+            <h3>1-800-555-0120</h3>
+            <p>Building a healthy environment that supports development for the community. Your personal case manager will ensure that you receive the best possible care.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================ /banner ================= -->
+
+  <!-- ================ news ================= -->
+  <section class="news">
+    <div class="news-box">
+      <div class="left-box">
+        <div class="box-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-12">
+                <div class="content wow fadeInLeft">
+                  <div class="heading">
+                    <h2>Our Latest News</h2>
+                  </div>
+
+                  <div class="box">
+                    <h3><a href="#">My dental office need a blog area galley printingdern care to ailing dear.</a></h3>
+                    <ul>
+                      <li>
+                        <i class="fa-solid fa-calendar-days"></i>
+                        21 July, 20 20
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-user"></i>
+                        Posted by admin
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="box">
+                    <h3><a href="#">My dental office need a blog area galley printingdern care to ailing dear.</a></h3>
+                    <ul>
+                      <li>
+                        <i class="fa-solid fa-calendar-days"></i>
+                        21 July, 20 20
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-user"></i>
+                        Posted by admin
+                      </li>
+                    </ul>
+                  </div>
+                  <a class="blog-btn" href="#">
+                    SEE ALL NEWS
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-box">
+          <div class="box-content">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <div class="content wow fadeInRight">
+                    <div class="heading">
+                      <h2>Testimonials</h2>
+                    </div>
+                    <!-- Swiper -->
+                    <div class="swiper leftSwiper wow fadeInDown">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="box">
+                            <h3>Josef Ardogan<span> / CEO Artland</span></h3>
+                            <ul>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                            </ul>
+                            <p>
+                              "Eodem modo typi, qui nunc nobis videntur parum clar fiant sollemnes in futurum. Lorem
+                              ipsum dolor sit amet tetuer adipiscing elit, sed diam nonu."
+                            </p>
+                          </div>
+                          <div class="box">
+                            <h3>Josef Ardogan<span> / CEO Artland</span></h3>
+                            <ul>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                            </ul>
+                            <p>
+                              "Eodem modo typi, qui nunc nobis videntur parum clar fiant sollemnes in futurum."
+                            </p>
+                          </div>
+                        </div>
+          
+                        <div class="swiper-slide">
+                          <div class="box">
+                            <h3>Josef Ardogan<span> / CEO Artland</span></h3>
+                            <ul>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                            </ul>
+                            <p>
+                              "Eodem modo typi, qui nunc nobis videntur parum clar fiant sollemnes in futurum. Lorem
+                              ipsum dolor sit amet tetuer adipiscing elit, sed diam nonu."
+                            </p>
+                          </div>
+                          <div class="box">
+                            <h3>Josef Ardogan<span> / CEO Artland</span></h3>
+                            <ul>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                            </ul>
+                            <p>
+                              "Eodem modo typi, qui nunc nobis videntur parum clar fiant sollemnes in futurum."
+                            </p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="box">
+                            <h3>Josef Ardogan<span> / CEO Artland</span></h3>
+                            <ul>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                            </ul>
+                            <p>
+                              "Eodem modo typi, qui nunc nobis videntur parum clar fiant sollemnes in futurum. Lorem
+                              ipsum dolor sit amet tetuer adipiscing elit, sed diam nonu."
+                            </p>
+                          </div>
+                          <div class="box">
+                            <h3>Josef Ardogan<span> / CEO Artland</span></h3>
+                            <ul>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                            </ul>
+                            <p>
+                              "Eodem modo typi, qui nunc nobis videntur parum clar fiant sollemnes in futurum."
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================ /news ================= -->
+
+  <!-- ================ contact ================= -->
+  <section class="contact">
+    <div class="section-img">
+      <img src="assest/img/figure7.png" alt="">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-8 col-md-8 col-12">
+          <div class="content">
+            <h2>We Provide the highest level of satisfaction care & services to our patients.</h2>
+            <a class="phone" href="#">
+              <i class="fa-solid fa-phone"></i>
+              +123 44092 888
+            </a>
+            <a class="btn" href="#">Make an Appointment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================ /contact ================= -->
+  
   <!-- ================ Footer ================= -->
-  <footer></footer>
+  <footer>
+    <section class="top-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="footer-box">
+              <div class="footer-logo">
+                <a href="#">
+                  <img src="assest/img/footerlogo.png" alt="">
+                </a>
+              </div>
+              <div class="footer-about">
+                <P>
+                  We are ipsum dolor sit amet aeeatt consectetuer adipiscing elitseder diam
+                  nonummy.
+                </P>
+              </div>
+              <div class="footer-contact">
+                <ul>
+                  <li>
+                    <i class="fa-solid fa-location-dot"></i>
+                    59 Street, 1200 Techpark
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-phone-flip"></i>
+                    +59888555
+                  </li>
+                  <li>
+                    <i class="fa-regular fa-envelope"></i>
+                    medilink@gmail.com
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="footer-box">
+              <div class="footer-heading">
+                <h3>Departments</h3>
+              </div>
+              <div class="footer-body">
+                <ul>
+                  <li><a href="#">Dental Care</a></li>
+                  <li><a href="#">Medicine</a></li>
+                  <li><a href="#">Orthopedic</a></li>
+                  <li><a href="#">Emergency</a></li>
+                  <li><a href="#">Skilled Doctors</a></li>
+                  <li><a href="#">Certified Clinic</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="footer-box">
+              <div class="footer-heading">
+                <h3>Quick Links</h3>
+              </div>
+              <div class="footer-body">
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">What We Do</a></li>
+                    <li><a href="#">Faq’s</a></li>
+                    <li><a href="#">Appointment</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">24/7 Support</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="footer-box">
+              <div class="footer-heading">
+                <h3>Opening Hours</h3>
+              </div>
+              <div class="footer-body">
+                <ul>
+                  <li>Mon - Tue: 9.00 - 17.00</li>
+                  <li>Wed - Thur: 9.00 - 16.00</li>
+                  <li>Fri - Sat: 9.00 - 12.00</li>
+                  <li>Saturday : 9.00 - 14.00</li>
+                  <li>Sunday : <span>Closed</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section class="middle-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-12">
+            <div class="social">
+              <ul>
+                <li>Follow Us :</li>
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-8 col-12">
+            <div class="row">
+              <div class="col-md-6 col-12">
+                <div class="news">
+                  <h3>Stay informed and healthy</h3>
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="sign-up">
+                  <input class="form" type="text" placeholder="Enter your e-mail">
+                  <div class="btn">
+                    <button type="submit"><span>Sign Up</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section class="bot-footer">
+      <div class="container">
+        <div class="copy-right">
+          Copyright @ 2022 Blue Technology. All Rights Reserved.
+          <a href="#" target="_blank">Blue Technology</a>
+        </div>
+      </div>
+    </section>
+  </footer>
   <!-- ================ /Footer ================= -->
 
   <!-- ================ JavaScript ================= -->
   <script src="assest/js/vendor/jquery.min.js"></script>
-  <script src="assest/js/vendor/bootstrap.bundle.min.js"></script>
   <script src="assest/js/vendor/all.min.js"></script>
+  <script src="assest/js/vendor/bootstrap.bundle.min.js"></script>
   <script src="assest/js/vendor/wow.min.js"></script>
   <script src="assest/js/vendor/swiper-bundle.min.js"></script>
-  <script src="assest/js/vendor/owl.carousel.min.js"></script>
   <script src="assest/js/script.js"></script>
 </body>
 </html>

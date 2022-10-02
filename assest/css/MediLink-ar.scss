@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    // direction: rtl;
+    direction: rtl;
 }
 :root {
     --transition: 0.3s ease-in-out;
@@ -108,17 +108,17 @@ header {
                     align-items: center;
                     margin-bottom: 0;
                     li {
-                        margin-right: 10px;
-                        padding-right: 10px;
+                        margin-left: 10px;
+                        padding-left: 10px;
                         color: #444444;
-                        border-right: 1px solid #d7d7d7;
+                        border-left: 1px solid #d7d7d7;
                         svg {
-                            margin-right: 5px;
+                            margin-left: 5px;
                             color: var(--blue);
                         }
                     }
                     li:last-child {
-                        border-right: 0;
+                        border-left: 0;
                     }
                 }
                 form {
@@ -212,11 +212,11 @@ header {
                         max-width: 100%;
                         @media (max-width: 992px) {
                             max-width: unset;
-                            padding-left: 15px;
+                            padding-right: 15px;
                         }
                         @media (max-width: 576px) {
                             max-width: unset;
-                            padding-left: 0;
+                            padding-right: 0;
                         }
                     }
                 }
@@ -228,9 +228,9 @@ header {
                     flex-wrap: wrap;
                     position: absolute;
                     top: 24px;
-                    right: 26px;
+                    left: 26px;
                     @media (max-width: 576px) {
-                        right: 18px;
+                        left: 18px;
                     }
                     .bar {
                         width: 100%;
@@ -340,7 +340,7 @@ header {
                                         font-size: 16px;
                                         font-weight: 600;
                                         background: #fff;
-                                        padding: 20px 0 20px 40px;
+                                        padding: 20px 40px 20px 0;
                                         display: block;
                                         transition: var(--transition);
                                         @media (max-width: 992px) {
@@ -395,7 +395,7 @@ header {
                     content: "";
                     position: absolute;
                     bottom: 0;
-                    left: -50%;
+                    right: -50%;
                     width: 0;
                     height: 3px;
                     background-color: var(--blue);
@@ -404,13 +404,8 @@ header {
                     }
                 }
                 .main-menu > ul > li:hover::after {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
+                    right: 0;
                     width: 100%;
-                    height: 3px;
-                    background-color: var(--blue);
                     transition: var(--transition);
                     @media (max-width: 992px) {
                         content: none;
@@ -468,14 +463,14 @@ header {
                         .search-input {
                             position: absolute;
                             top: 50%;
-                            right: 50px;
+                            left: 50px;
                             transform: translateY(-50%);
                             font-size: 16px;
                             padding: 0 20px;
                             color: #fff;
                             background: var(--blue);
                             height: 50px;
-                            border-radius: 10px 0px 0px 10px;
+                            border-radius: 0px 10px 10px 0px;
                             visibility: hidden;
                             opacity: 0;
                             width: 0;
@@ -503,6 +498,7 @@ header {
                         .search-btn {
                             cursor: pointer;
                             svg {
+                                transform: rotate(90deg);
                                 font-size: 22px;
                                 padding: 5px;
                                 vertical-align: middle;
@@ -518,7 +514,7 @@ header {
                         justify-content: space-between;
                         align-items: center;
                         padding: 14px 24px;
-                        margin-left: 20px;
+                        margin-right: 20px;
                         color: #ffffff;
                         background-color: var(--blue);
                         text-transform: uppercase;
@@ -532,7 +528,8 @@ header {
                             font-size: 14px;
                         }
                         svg {
-                            margin-left: 10px;
+                            margin-right: 10px;
+                            transform: rotate(180deg);
                         }
                     }
                     .btn:hover {
@@ -579,25 +576,28 @@ header {
     }
     .swiper-slide {
         position: relative;
+        .image-1, .image-2, .image-3 {
+            transform: rotateY(180deg);
+        }
         .content {
             position: absolute;
             top: 50%;
-            left: 7%;
+            right: 7%;
             width: 40%;
             transform: translate(0, -50%);
             @media (max-width: 992px) {
-                left: 10%;
+                right: 10%;
                 }
                 @media (max-width: 768px) {
-                    left: 15%;
+                    right: 15%;
                     width: 50%;
                 }
                 @media (max-width: 576px) {
-                    left: 50%;
+                    right: 50%;
                     top: 50%;
                     width: 80%;
                     text-align: center;
-                    transform: translate(-50%, -25%);
+                    transform: translate(50%, -25%);    
                 }
                 .title {
                     font-size: 38px;
@@ -651,6 +651,7 @@ header {
                     }
                     svg {
                         font-size: 15px;
+                        transform: rotateY(180deg);
                     }
                 }
 
@@ -678,7 +679,7 @@ header {
         }
         @keyframes titleAnimate {
             0% {
-                transform: translateX(-400px);
+                transform: translateX(400px);
 
             }
             100% {
@@ -819,7 +820,8 @@ header {
                         border-radius: 4px;
                         background: linear-gradient(to right, var(--blue), #285ada);
                         padding: 30px 30px 30px 75px;
-                        display: block;
+                        display: flex;
+                        flex-direction: row-reverse;
                         color: #ffffff;
                         position: relative;
                         z-index: 2;
@@ -828,7 +830,7 @@ header {
                             font-size: 30px;
                             position: absolute;
                             top: 50%;
-                            left: 30px;
+                            right: 30px;
                             transform: translateY(-50%);
                         }
                     }
@@ -837,9 +839,10 @@ header {
                         font-family: "Font Awesome 6 Free";
                         font-weight: 600;
                         position: absolute;
-                        top: 50%;
+                        top: 34%;
                         transform: translateY(-50%);
-                        right: 30px;
+                        left: 30px;
+                        transform: rotateY(180deg);
                         z-index: 1;
                         color: #ffffff;
                     }
@@ -897,10 +900,10 @@ header {
     }
     .left-image {
         position: absolute;
-        left: -10px;
-        top: 45%;
+        right: -10px;
+        top: 5%;
+        transform: rotateY(180deg);
         max-width: 100%;
-        transform: translateY(-50%);
         -webkit-user-drag: none;
     }
     .row {
@@ -934,7 +937,7 @@ header {
                 content: "";
                 height: 4px;
                 width: 45px;
-                left: 12px;
+                right: 12px;
                 bottom: 0;
                 background-color: #396cf0;
                 margin: 0 auto;
@@ -1017,12 +1020,13 @@ header {
                         position: relative;
                         right: 0;
                         color: #111111;
-                        margin-left: 10px;
-                        transition: all 0.3s ease-out;
+                        margin-right: 10px;
+                        transform: rotateY(180deg);
+                        transition: var(--transition);
                     }
                 }
                 .box-btn:hover svg {
-                    margin-left: 15px;
+                    margin-right: 15px;
                 }
             }
             .box:hover {
@@ -1096,15 +1100,15 @@ header {
                     .row {
                         .col-lg-6 {
                             .content {
-                                padding-right: 192px;
+                                padding-left: 192px;
                                 @media (max-width: 1200px) {
-                                    padding-right: 95px;
+                                    padding-left: 95px;
                                 }
                                 @media (max-width: 992px) {
-                                    padding-right: 80px;
+                                    padding-left: 80px;
                                 }
                                 @media (max-width: 576px) {
-                                    padding-right: 0;
+                                    padding-left: 0;
                                 }
                                 h2 {
                                     color: #ffffff;
@@ -1137,8 +1141,9 @@ header {
                                             font-size: 14px;
                                         }
                                         svg {
+                                            transform: rotateY(180deg);
                                             font-size: 24px;
-                                            margin-right: 10px;
+                                            margin-left: 10px;
                                             vertical-align: middle;
                                             @media (max-width: 576px) {
                                                 font-size: 18px;
@@ -1219,7 +1224,7 @@ header {
                         position: absolute;
                         top: 50%;
                         transform: translateY(-50%);
-                        left: 20px;
+                        right: 20px;
                         font-weight: 500;
                         z-index: 5;
                     }
@@ -1407,7 +1412,7 @@ header {
                 position: absolute;
                 height: 4px;
                 width: 45px;
-                left: 12px;
+                right: 12px;
                 bottom: 0;
                 background-color: #396cf0;
                 margin: 0 auto;
@@ -1515,7 +1520,7 @@ header {
                             color: #646464;
                             span {
                                 position: absolute;
-                                right: 0;
+                                left: 0;
                                 top: 0;
                             }
                         }
@@ -1667,6 +1672,7 @@ header {
                                         }
                                     }
                                     .box-body {
+                                        text-align: right;
                                         .box-title {
                                             font-size: 24px;
                                             text-transform: capitalize;
@@ -1843,14 +1849,13 @@ header {
                     .row {
                         .col-12 {
                             padding: 80px 0 80px 0;
-                            padding-right: 100px;
-                            width: 85%;
-                            margin: auto;
+                            padding-left: 100px;
                             @media (max-width: 1200px) {
                                 padding: 70px 0 70px 0;
                             }
                             @media (max-width: 992px) {
                                 padding: 60px 0 60px 0;
+
                             }
                             @media (max-width: 768px) {
                                 padding: 50px 0 50px 0;
@@ -1858,6 +1863,8 @@ header {
                             @media (max-width: 567px) {
                                 padding: 40px 0 40px 0;
                                 padding-left: 0;
+                                width: 85%;
+                                margin: auto;
                             }
                             .content {
                                 @media (max-width: 576px) {
@@ -1878,11 +1885,11 @@ header {
                                     height: 4px;
                                     width: 45px;
                                     background-color: var(--blue);
-                                    left: 0;
+                                    right: 0;
                                     bottom: -20px;
                                     @media (max-width: 576px) {
-                                        left: 50%;
-                                        transform: translateX(-50%);
+                                        right: 50%;
+                                        transform: translateX(50%);
                                     }
                                 }
                                 .box {
@@ -1911,10 +1918,10 @@ header {
                                             justify-content: center;
                                         }
                                         li {
-                                            margin-right: 30px;
+                                            margin-left: 30px;
                                             svg {
                                                 color: #396cf0;
-                                                margin-right: 5px;
+                                                margin-left: 5px;
                                                 font-size: 14px;
                                             }
                                         }
@@ -1965,12 +1972,12 @@ header {
                     background-position: center;
                     background-size: cover;
                     background-repeat: no-repeat;
-                    padding-left: 100px;
+                    padding-right: 100px;
                     @media (max-width: 1200px) {
-                        padding-left: 50px;
+                        padding-right: 50px;
                     }
                     @media (max-width: 992px) {
-                        padding-left: 0;
+                        padding-right: 0;
                     }
                     .col-12 {
                         padding: 80px 0 160px 0;
@@ -1989,6 +1996,8 @@ header {
                         .content {
                             @media (max-width: 576px) {
                                 text-align: center;
+                                width: 85%;
+                                margin: auto;
                             }
                             .heading {
                                 position: relative;
@@ -2006,11 +2015,11 @@ header {
                                 height: 4px;
                                 width: 45px;
                                 background-color: #fff;
-                                left: 0;
+                                right: 0;
                                 bottom: -20px;
                                 @media (max-width: 576px) {
-                                    left: 50%;
-                                    transform: translateX(-50%);
+                                    right: 50%;
+                                    transform: translateX(50%);
                                 }
                             }
                             .swiper {
@@ -2086,6 +2095,7 @@ header {
     }
     .container {
         .row {
+            justify-content: flex-end;
             .col-12 {
                 .content {
                     display: flex;
@@ -2130,7 +2140,8 @@ header {
                         svg {
                         font-size: 24px;
                         color: var(--blue);
-                        margin-right: 10px;
+                        margin-left: 10px;
+                        transform: rotateY(180deg);
                         @media (max-width: 992px) {
                             font-size: 22px;
                         }
@@ -2191,19 +2202,18 @@ header {
                     .footer-contact {
                         margin-bottom: 32px;
                         ul {
-
                             li {
                                 position: relative;
                                 font-size: 17px;
                                 color: #cecece;
                                 margin-bottom: 15px;
-                                padding-left: 42px;                                display: flex;
+                                padding-right: 42px;                                display: flex;
                                 align-items: center;
                                 svg {
                                     position: absolute;
                                     font-size: 20px;
                                     color: #fff;
-                                    left: 0;
+                                    right: 0;
                                 }
                             }
                         }
@@ -2225,7 +2235,7 @@ header {
                         content: '';
                         position: absolute;
                         bottom: 0;
-                        left: 0;
+                        right: 0;
                         width: 50px;
                         height: 4px;
                         background-color: var(--blue);
@@ -2333,7 +2343,7 @@ header {
                                 padding: 8px 24px;
                                 border: 0;
                                 outline: 0;
-                                border-radius: 30px 0 0 30px;
+                                border-radius: 0 30px 30px 0;
                                 background: #1f1f1f;
                                 text-transform: lowercase;
                                 font-size: 15px;
@@ -2351,7 +2361,7 @@ header {
                             .btn {
                                 padding: 0;
                                 border: 0;
-                                border-radius: 0 30px 30px 0;
+                                border-radius: 30px 0 0 30px;
                                 background: var(--blue);
                                 display: flex;
                                 align-items: center;

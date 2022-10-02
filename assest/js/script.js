@@ -3,7 +3,7 @@ $(document).ready(function () {
   $(".loader ").fadeOut("slow");
   //End spinner
 
-  //Start WOW js
+  //Start wowJs
   wow = new WOW(
     {
     boxClass:     'wow',      // default
@@ -11,10 +11,9 @@ $(document).ready(function () {
     offset:       0,          // default
     mobile:       false,       // default
     live:         true        // default
-  }
-  )
-  wow.init();
-  //End WOW js
+    });
+    wow.init();
+  //End wowJs
 
   //Start burger menu
   let btn = document.querySelector('.toggle-btn'),
@@ -28,14 +27,6 @@ $(document).ready(function () {
       });
   //End burger menu
 
-  //Start search btn
-  let searchBtn = document.querySelector('.search-btn'),
-    searchInput = document.querySelector('.search-input');
-
-    searchBtn.addEventListener('click', function() {
-      searchInput.classList.toggle('search-active');
-  });
-  //End search btn
 
   //Start sub-menu active
   let dropLi = document.querySelectorAll('li.drop-li'),
@@ -68,8 +59,58 @@ $(document).ready(function () {
   //   }
   //End sub-menu active
 
-  //Start swiperjs
-  const swiper = new Swiper('.swiper', {
+  //Start search btn
+  let searchBtn = document.querySelector('.search-btn'),
+    searchInput = document.querySelector('.search-input');
+
+    searchBtn.addEventListener('click', function() {
+      searchInput.classList.toggle('search-active');
+  });
+  //End search btn
+
+  //Start nave-bar fixed
+  let navBar = document.querySelector('.nav-bar'),
+      // mainMenuA = document.querySelectorAll('.main-menu ul li a')
+      navBarHeight = navBar.offsetHeight;
+
+  window.addEventListener('scroll', fixedMenu);
+
+  function fixedMenu () {
+    if (window.pageYOffset >= navBarHeight + 10) {
+      navBar.classList.add('fixed-menu');
+      // for (i = 0 ; i<= mainMenuA.length ; i++) {
+      //   mainMenuA[i].classList.add('less-padding');
+      // }
+    } else {
+      navBar.classList.remove('fixed-menu');
+      // for (i = 0 ; i<= mainMenuA.length ; i++) {
+      //   mainMenuA[i].classList.remove('less-padding');
+      // }
+    }
+  };
+  //Start nave-bar fixed
+
+  //Start Back To Top Button
+  //Get the button
+  let myButton = document.querySelector(".btn-back-to-top");
+  //Use if to show button
+  window.onscroll = function () {
+  if (window.pageYOffset >= 500) {
+      myButton.classList.add('active');
+  } else {
+      myButton.classList.remove('active');
+    }
+  };
+
+  //back to top
+  myButton.onclick = function () {
+  'use strict';
+  window.scrollTo(0, 0);
+  };
+  //End Back To Top Button
+
+  //Start swiper-1
+  var mainSlider = new Swiper('.mainSlider', {
     // Optional parameters
     // direction: 'vertical',
     loop: true,
@@ -80,13 +121,13 @@ $(document).ready(function () {
     parallax: true,
     // If we need pagination
     pagination: {
-      el: '.swiper-pagination',
+      el: '.mainSlider-pagination',
     },
 
     // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.mainSlider-button-next',
+      prevEl: '.mainSlider-button-prev',
     },
 
     // And if we need scrollbar
@@ -94,28 +135,39 @@ $(document).ready(function () {
     //   el: '.swiper-scrollbar',
     // },
   });
-  //End swiperjs
+  //End swiper-1
 
-  //Start Owl Carousel
-  $('.owl-carousel').owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: false,
-    responsive:{
-        0:{
-            items:1
-        },
-        768:{
-            items:2
-        },
-        992:{
-            items:3
-        },
-        1200:{
-            items:4
-        }
-    }
-  })
-  //End Owl Carousel
+  //Start swiper-2
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    breakpoints: {
+      1200: {
+        slidesPerView: 4,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+      576: {
+        slidesPerView: 2,
+      }
+    },
+  });
+  //End swiper-2
 
+  //Start swiper-3
+  var leftSwiper = new Swiper(".leftSwiper", {
+    spaceBetween: 20,
+    autoplay: {
+      delay: 3000,
+    },
+    pagination: {
+      el: ".leftSwiper-pagination",
+      clickable: true
+    },
+  });
+  //End swiper-3
 });
