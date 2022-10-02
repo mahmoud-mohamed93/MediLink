@@ -125,6 +125,7 @@ header {
                     select#lang-switch {
                         border: 1px solid var(--blue);
                         border-radius: 4px;
+                        outline: 0;
                         color: var(--blue);
                         option {
                             color: #333;
