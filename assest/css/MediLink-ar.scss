@@ -61,7 +61,7 @@ a {
     border-radius: 50%;
     position: fixed;
     bottom: 0;
-    right: 25px;
+    left: 25px;
     border: 0;
     opacity: 0;
     pointer-events: none;
@@ -102,7 +102,7 @@ header {
                 @media (max-width: 1200px) {
                     justify-content: space-between;
                 }
-                ul {
+                > ul {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
@@ -121,16 +121,10 @@ header {
                         border-left: 0;
                     }
                 }
-                form {
-                    select#lang-switch {
+                .dropdown {
+                    > .btn {
+                        background-color: var(--blue);
                         border: 1px solid var(--blue);
-                        border-radius: 4px;
-                        outline: 0;
-                        color: #000;
-                        option {
-                            color: #333;
-                            background-color: #fff;
-                        }
                     }
                 }
             }
@@ -524,7 +518,7 @@ header {
                         border-color: var(--blue);
                         border-radius: 4px;
                         cursor: pointer;
-                        transition: var(--transition-slow); 
+                        transition: background-color var(--transition-slow); 
                         span {
                             font-size: 14px;
                         }
@@ -536,7 +530,7 @@ header {
                     .btn:hover {
                         color: var(--blue);
                         background-color: #fff;
-                        transition: var(--transition-slow);
+                        transition: background-color var(--transition-slow);
                     }
                 }
             }
@@ -567,6 +561,8 @@ header {
 
 /* Start main Slider */
 .swiper {
+    margin-left: auto;
+    margin-right: auto;
     height: 35vw;
     object-fit: cover;
     @media (max-width: 992px) {
@@ -577,9 +573,6 @@ header {
     }
     .swiper-slide {
         position: relative;
-        .image-1, .image-2, .image-3 {
-            transform: rotateY(180deg);
-        }
         .content {
             position: absolute;
             top: 50%;
@@ -595,10 +588,9 @@ header {
                 }
                 @media (max-width: 576px) {
                     right: 50%;
-                    top: 50%;
                     width: 80%;
                     text-align: center;
-                    transform: translate(50%, -25%);    
+                    transform: translate(-50%, -25%);
                 }
                 .title {
                     font-size: 38px;
@@ -652,7 +644,6 @@ header {
                     }
                     svg {
                         font-size: 15px;
-                        transform: rotateY(180deg);
                     }
                 }
 
@@ -689,29 +680,24 @@ header {
         }
     }
 }
-.swiper .image-1 {
-    background: url(../img/slide1-1.jpg);
+.swiper .image-1,
+.swiper .image-2,
+.swiper .image-3 {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
+    transform: rotateY(180deg);
+}
+.swiper .image-1 {
+    background-image: url(../img/slide1-1.jpg);
 }
 .swiper .image-2 {
-    background: url(../img/slide1-2.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
+    background-image: url(../img/slide1-2.jpg);
 }
 .swiper .image-3 {
-    background: url(../img/slide1-3.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
+    background-image: url(../img/slide1-3.jpg);
 }
 .swiper .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
 .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
@@ -940,7 +926,7 @@ header {
                 width: 45px;
                 right: 12px;
                 bottom: 0;
-                background-color: #396cf0;
+                background-color: var(--blue);
                 margin: 0 auto;
             }
         }
@@ -1415,7 +1401,7 @@ header {
                 width: 45px;
                 right: 12px;
                 bottom: 0;
-                background-color: #396cf0;
+                background-color: var(--blue);
                 margin: 0 auto;
             }
         }
@@ -1586,7 +1572,7 @@ header {
                 left: 50%;
                 bottom: 0;
                 transform: translate(-50%, 20px);
-                background-color: #396cf0;
+                background-color: var(--blue);
                 margin: 0 auto;
             }
         }
@@ -1680,7 +1666,7 @@ header {
                                             font-weight: 500;
                                         }
                                         .box-contact {
-                                            color: #396cf0;
+                                            color: var(--blue);
                                             font-weight: 500;
                                             margin-bottom: 15px;
                                         }
@@ -1724,7 +1710,7 @@ header {
                                     transition: var(--transition);
                                 }
                                 .item-title {
-                                    color: #396cf0;
+                                    color: var(--blue);
                                     font-weight: 500;
                                 }
                                 .item-time {
@@ -1849,20 +1835,24 @@ header {
                 .container {
                     .row {
                         .col-12 {
-                            padding: 80px 0 80px 0;
+                            padding-top: 80px;
+                            padding-bottom: 80px;
                             padding-left: 100px;
                             @media (max-width: 1200px) {
-                                padding: 70px 0 70px 0;
+                                padding-top: 70px;
+                                padding-bottom: 70px;
                             }
                             @media (max-width: 992px) {
-                                padding: 60px 0 60px 0;
-
+                                padding-top: 60px;
+                                padding-bottom: 60px;
                             }
                             @media (max-width: 768px) {
-                                padding: 50px 0 50px 0;
+                                padding-top: 50px;
+                                padding-bottom: 50px;
                             }
                             @media (max-width: 567px) {
-                                padding: 40px 0 40px 0;
+                                padding-top: 40px;
+                                padding-bottom: 40px;
                                 padding-left: 0;
                                 width: 85%;
                                 margin: auto;
@@ -1921,7 +1911,7 @@ header {
                                         li {
                                             margin-left: 30px;
                                             svg {
-                                                color: #396cf0;
+                                                color: var(--blue);
                                                 margin-left: 5px;
                                                 font-size: 14px;
                                             }
@@ -1942,9 +1932,10 @@ header {
                                     display: inline-block;
                                     transition: var(--transition);
                                     svg {
-                                        color: #396cf0;
-                                        margin-left: 10px;
+                                        color: var(--blue);
+                                        margin-right: 10px;
                                         transition: var(--transition);
+                                        transform: rotateY(180deg);
                                     }
                                 }
                                 .blog-btn:hover {
@@ -1981,18 +1972,23 @@ header {
                         padding-right: 0;
                     }
                     .col-12 {
-                        padding: 80px 0 160px 0;
+                        padding-top: 80px;
+                        padding-bottom: 160px;
                         @media (max-width: 1200px) {
-                            padding: 70px 0 140px 0;
+                            padding-top: 70px;
+                            padding-bottom: 140px;
                         }
                         @media (max-width: 992px) {
-                            padding: 60px 0 120px 0;
+                            padding-top: 60px;
+                            padding-bottom: 120px;
                         }
                         @media (max-width: 768px) {
-                            padding: 50px 0 100px 0;
+                            padding-top: 50px;
+                            padding-bottom: 100px;
                         }
                         @media (max-width: 567px) {
-                            padding: 40px 0 80px 0;
+                            padding-top: 40px;
+                            padding-bottom: 80px;
                         }
                         .content {
                             @media (max-width: 576px) {
@@ -2203,7 +2199,7 @@ header {
                     .footer-contact {
                         margin-bottom: 32px;
                         ul {
-                            li {
+                            > li {
                                 position: relative;
                                 font-size: 17px;
                                 color: #cecece;
@@ -2242,21 +2238,29 @@ header {
                         background-color: var(--blue);
                     }
                     .footer-body {
-                        ul {
-                            li {
+                        > ul {
+                            > li {
                                 color: #e3e3e3;
                                 font-size: 17px;
                                 margin-bottom: 10px;
-                                a {
+                                > a {
                                     font-size: 17px;
                                     color: #e3e3e3;
                                     transition: var(--transition);
                                 }
-                                a:hover {
+                                > a:hover {
                                     color: var(--blue-hover);
                                 }
                                 span {
                                     color: var(--blue-hover);
+                                }
+                            }
+                            > li:last-child {
+                                .dropdown {
+                                    .btn {
+                                        background-color: var(--blue);
+                                        border: 1px solid var(--blue);
+                                    }
                                 }
                             }
                         }

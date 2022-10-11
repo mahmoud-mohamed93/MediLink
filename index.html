@@ -20,153 +20,40 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="assest/css/vendor/all.min.css" />
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="assest/css/vendor/bootstrap.min.css" />
+  <link rel="stylesheet" id="langBootstrap" href="assest/css/vendor/bootstrap.min.css" />
   <!-- <link rel="stylesheet" href="assest/css/vendor/bootstrap.rtl.min.css" /> -->
   <!-- wowJs -->
   <link rel="stylesheet" href="assest/css/vendor/animate.css" />
   <!-- Swiperjs -->
   <link rel="stylesheet" href="assest/css/vendor/swiper-bundle.min.css" />
   <!-- MediLink Page style  -->
-  <link rel="stylesheet" id="enStyle" href="assest/css/MediLink.css" />
-  <!-- <link rel="stylesheet" id="enStyle" href="assest/css/MediLink-ar.css" /> -->
+  <link rel="stylesheet" id="langStyle" href="assest/css/MediLink.css" />
+  <!-- <link rel="stylesheet" id="arStyle" href="assest/css/MediLink-ar.css" /> -->
 </head>
 
 <body>
-  <!-- loader -->
+  <!-- ================= loader ================= -->
   <div class="loader">
     <span></span>
   </div>
-  <!-- end loader -->
+  <!-- ================= end loader ================= -->
 
-  <!-- Start Back to top button -->
+  <!-- ================= Start Back to top button ================= -->
   <button class="btn-back-to-top">
       <i class="fas fa-chevron-up"></i>
       <i class="fas fa-chevron-up"></i>
   </button>
-  <!-- End Back to top button -->
+  <!-- ================= End Back to top button ================= -->
 
   <!-- ================ Header ================= -->
-  <header>
-    <section class="top-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-8">
-            <ul>
-              <li>
-                <i class="fa-solid fa-phone"></i>
-                Call: 123 884400
-              </li>
-              <li>
-                <i class="fa-solid fa-location-dot"></i>
-                Medilink ltd, 59 Newyork City
-              </li>
-              <li>
-                <i class="fa-regular fa-clock"></i>
-                Mon - Fri: 9.00am - 11.00pm
-              </li>
-            </ul>
-            
-            <form>
-                <select id="lang-switch">
-                    <option value="en" selected>EN</option>
-                    <option value="ar">AR</option>
-                </select>
-            </form>
-          </div>
-          <div class="col-xl-4">
-            <ul>
-              <li>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="nav-bar">
-      <div class="container">
-        <div class="row">
-          <div  class="col-lg-2 col-12">
-            <div class="col-12 logo">
-              <a href="index.html"><img src="assest/img/logo.png" alt="logo"></a>
-            </div>
-            <div class="toggle-btn d-lg-none">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-            </div>
-          </div>
-          <div class="col-lg-7 main-menu">
-            <ul>
-              <li>
-                <a href="#">home</a>
-              </li>
-              <li>
-                <a href="#">about</a>
-              </li>
-              <li class="drop-li">
-                <a href="#">departments <i class="fa-solid fa-plus"></i></i></a>
-                <ul class="sub-menu">
-                  <li><a href="#">department 1</a></li>
-                  <li><a href="#">department 2</a></li>
-                  <li><a href="#">department 3</a></li>
-                  <li><a href="#">department 4</a></li>
-                </ul>
-              </li>
-              <li class="drop-li">
-                <a href="#">Doctors <i class="fa-solid fa-plus"></i></a>
-                <ul class="sub-menu">
-                  <li><a href="#">doctor 1</a></li>
-                  <li><a href="#">doctor 2</a></li>
-                  <li><a href="#">doctor 3</a></li>
-                  <li><a href="#">doctor 4</a></li>
-                </ul>
-              </li>
-              <li class="drop-li">
-                <a href="#">news <i class="fa-solid fa-plus"></i></a>
-                <ul class="sub-menu">
-                  <li><a href="#">news 1</a></li>
-                  <li><a href="#">news 2</a></li>
-                  <li><a href="#">news details</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">contacts</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-3 appartment">
-            <div class="search-icon">
-              <input type="text" class="search-input" placeholder="Search here" required>
-              <div class="search-btn">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </div>
-            </div>
-            <button class="btn">
-              <span>Appartment</span>
-              <i class="fa-solid fa-chevron-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-  </header>
+  <header></header> 
   <!-- ================ /Header ================= -->
 
   <!-- ================ Slider ================= -->
   <!-- Slider main container -->
   <div class="swiper mainSlider">
     <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
+    <div class="swiper-wrapper  ">
       <!-- Slides -->
       <div class="swiper-slide">
         <div class="image-1"></div>
@@ -1048,7 +935,7 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-6 col-12">
-                <div class="content wow fadeInLeft">
+                <div class="content wow fadeInDown">
                   <div class="heading">
                     <h2>Our Latest News</h2>
                   </div>
@@ -1095,7 +982,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-12">
-                  <div class="content wow fadeInRight">
+                  <div class="content wow fadeInDown">
                     <div class="heading">
                       <h2>Testimonials</h2>
                     </div>
@@ -1226,150 +1113,21 @@
   <!-- ================ /contact ================= -->
   
   <!-- ================ Footer ================= -->
-  <footer>
-    <section class="top-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 col-12">
-            <div class="footer-box">
-              <div class="footer-logo">
-                <a href="#">
-                  <img src="assest/img/footerlogo.png" alt="">
-                </a>
-              </div>
-              <div class="footer-about">
-                <P>
-                  We are ipsum dolor sit amet aeeatt consectetuer adipiscing elitseder diam
-                  nonummy.
-                </P>
-              </div>
-              <div class="footer-contact">
-                <ul>
-                  <li>
-                    <i class="fa-solid fa-location-dot"></i>
-                    59 Street, 1200 Techpark
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-phone-flip"></i>
-                    +59888555
-                  </li>
-                  <li>
-                    <i class="fa-regular fa-envelope"></i>
-                    medilink@gmail.com
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-12">
-            <div class="footer-box">
-              <div class="footer-heading">
-                <h3>Departments</h3>
-              </div>
-              <div class="footer-body">
-                <ul>
-                  <li><a href="#">Dental Care</a></li>
-                  <li><a href="#">Medicine</a></li>
-                  <li><a href="#">Orthopedic</a></li>
-                  <li><a href="#">Emergency</a></li>
-                  <li><a href="#">Skilled Doctors</a></li>
-                  <li><a href="#">Certified Clinic</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-12">
-            <div class="footer-box">
-              <div class="footer-heading">
-                <h3>Quick Links</h3>
-              </div>
-              <div class="footer-body">
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">What We Do</a></li>
-                    <li><a href="#">Faq’s</a></li>
-                    <li><a href="#">Appointment</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">24/7 Support</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-12">
-            <div class="footer-box">
-              <div class="footer-heading">
-                <h3>Opening Hours</h3>
-              </div>
-              <div class="footer-body">
-                <ul>
-                  <li>Mon - Tue: 9.00 - 17.00</li>
-                  <li>Wed - Thur: 9.00 - 16.00</li>
-                  <li>Fri - Sat: 9.00 - 12.00</li>
-                  <li>Saturday : 9.00 - 14.00</li>
-                  <li>Sunday : <span>Closed</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-    <section class="middle-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-12">
-            <div class="social">
-              <ul>
-                <li>Follow Us :</li>
-                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-8 col-12">
-            <div class="row">
-              <div class="col-md-6 col-12">
-                <div class="news">
-                  <h3>Stay informed and healthy</h3>
-                </div>
-              </div>
-              <div class="col-md-6 col-12">
-                <div class="sign-up">
-                  <input class="form" type="text" placeholder="Enter your e-mail">
-                  <div class="btn">
-                    <button type="submit"><span>Sign Up</span></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </section>
-    <section class="bot-footer">
-      <div class="container">
-        <div class="copy-right">
-          Copyright @ 2022 Blue Technology. All Rights Reserved.
-          <a href="#" target="_blank">Blue Technology</a>
-        </div>
-      </div>
-    </section>
-  </footer>
+  <footer></footer>
   <!-- ================ /Footer ================= -->
 
-  <!-- ================ JavaScript ================= -->
+  <!-- ================ script links ================= -->
   <script src="assest/js/vendor/jquery.min.js"></script>
   <script src="assest/js/vendor/all.min.js"></script>
   <script src="assest/js/vendor/bootstrap.bundle.min.js"></script>
   <script src="assest/js/vendor/wow.min.js"></script>
   <script src="assest/js/vendor/swiper-bundle.min.js"></script>
   <script src="assest/js/script.js"></script>
+
+  <!-- ================ load header & footer ================= -->
+  <script>
+      $("header").load("header.html"); 
+      $("footer").load("footer.html");
+  </script>
 </body>
 </html>

@@ -2,7 +2,7 @@ $(document).ready(function () {
   //Start spinner
   $(".loader ").fadeOut("slow");
   //End spinner
-
+  
   //Start wowJs
   wow = new WOW(
     {
@@ -15,17 +15,7 @@ $(document).ready(function () {
     wow.init();
   //End wowJs
 
-  //Start burger menu
-  let btn = document.querySelector('.toggle-btn'),
-      mainMenu = document.querySelector('.main-menu'),
-      ul = document.querySelector('.main-menu ul');
 
-      btn.addEventListener('click', function() {
-          btn.classList.toggle('active-toggle-btn');
-          mainMenu.classList.toggle('main-menu-active');
-          ul.classList.toggle('height');
-      });
-  //End burger menu
 
 
   //Start sub-menu active
@@ -59,36 +49,9 @@ $(document).ready(function () {
   //   }
   //End sub-menu active
 
-  //Start search btn
-  let searchBtn = document.querySelector('.search-btn'),
-    searchInput = document.querySelector('.search-input');
 
-    searchBtn.addEventListener('click', function() {
-      searchInput.classList.toggle('search-active');
-  });
-  //End search btn
 
-  //Start nave-bar fixed
-  let navBar = document.querySelector('.nav-bar'),
-      // mainMenuA = document.querySelectorAll('.main-menu ul li a')
-      navBarHeight = navBar.offsetHeight;
 
-  window.addEventListener('scroll', fixedMenu);
-
-  function fixedMenu () {
-    if (window.pageYOffset >= navBarHeight + 10) {
-      navBar.classList.add('fixed-menu');
-      // for (i = 0 ; i<= mainMenuA.length ; i++) {
-      //   mainMenuA[i].classList.add('less-padding');
-      // }
-    } else {
-      navBar.classList.remove('fixed-menu');
-      // for (i = 0 ; i<= mainMenuA.length ; i++) {
-      //   mainMenuA[i].classList.remove('less-padding');
-      // }
-    }
-  };
-  //Start nave-bar fixed
 
   //Start Back To Top Button
   //Get the button
@@ -109,7 +72,7 @@ $(document).ready(function () {
   };
   //End Back To Top Button
 
-  //Start swiper-1
+  //Start main swiper
   var mainSlider = new Swiper('.mainSlider', {
     // Optional parameters
     // direction: 'vertical',
@@ -118,7 +81,7 @@ $(document).ready(function () {
       delay: 3000,
     },
     speed: 600,
-    parallax: true,
+    // parallax: true,
     // If we need pagination
     pagination: {
       el: '.mainSlider-pagination',
@@ -135,9 +98,9 @@ $(document).ready(function () {
     //   el: '.swiper-scrollbar',
     // },
   });
-  //End swiper-1
+  //End main swipe
 
-  //Start swiper-2
+  //Start swiper-1
   var swiper = new Swiper(".mySwiper", {
     spaceBetween: 20,
     pagination: {
@@ -156,9 +119,9 @@ $(document).ready(function () {
       }
     },
   });
-  //End swiper-2
+  //End swiper-1
 
-  //Start swiper-3
+  //Start swiper-2
   var leftSwiper = new Swiper(".leftSwiper", {
     spaceBetween: 20,
     autoplay: {
@@ -169,5 +132,5 @@ $(document).ready(function () {
       clickable: true
     },
   });
-  //End swiper-3
+  //End swiper-2
 });
