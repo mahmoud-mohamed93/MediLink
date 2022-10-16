@@ -1123,6 +1123,9 @@ header .nav-bar.fixed-menu {
   width: 100%;
   height: 100%;
 }
+.departments .row .swiper .swiper-wrapper {
+  direction: ltr;
+}
 .departments .row .swiper .swiper-wrapper .swiper-slide {
   font-size: 18px;
   /* Center slide text vertically */
@@ -1716,6 +1719,9 @@ header .nav-bar.fixed-menu {
 .doctors .row .swiper {
   width: 100%;
   height: 100%;
+}
+.doctors .row .swiper .swiper-wrapper {
+  direction: ltr;
 }
 .doctors .row .swiper .swiper-wrapper .swiper-slide {
   /* Center slide text vertically */
@@ -2370,6 +2376,9 @@ header .nav-bar.fixed-menu {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+.news .news-box .right-box .box-content .col-12 .content .swiper .swiper-wrapper {
+  direction: ltr;
 }
 .news .news-box .right-box .box-content .col-12 .content .swiper .swiper-wrapper .swiper-slide .box h3 {
   color: #ffffff;

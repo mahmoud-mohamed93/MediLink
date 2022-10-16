@@ -937,6 +937,7 @@ header {
             width: 100%;
             height: 100%;
             .swiper-wrapper {
+                direction: ltr;
                 .swiper-slide {
                     font-size: 18px;
                     /* Center slide text vertically */
@@ -1414,6 +1415,7 @@ header {
             width: 100%;
             height: 100%;
             .swiper-wrapper {
+                direction: ltr;
                 .swiper-slide {
                     /* Center slide text vertically */
                     display: flex;
@@ -2029,6 +2031,7 @@ header {
                             .swiper {
                                 height: fit-content;
                                 .swiper-wrapper {
+                                    direction: ltr;
                                     .swiper-slide {
                                         .box {
                                             h3 {
